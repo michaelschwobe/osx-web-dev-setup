@@ -167,7 +167,7 @@ Install via Package Manager:
 - LESS
 - Markdown Preview
 - Nettuts+ Fetch
-- Sass
+- SCSS
 - SideBarEnhancements
 - SublimeCodeIntel
 - SublimeLinter
