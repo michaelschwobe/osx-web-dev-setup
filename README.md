@@ -124,6 +124,14 @@ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 
 If the icons don't align perfectly, adjusting the Non-ASCII Font size is simpler than trying to fix font baselines.
 
+**TIP:** Want to use the commands `showFiles` and `hideFiles` to quickly toggle hidden files on or off? Add these lines to the end of `~/zshrc`:
+
+```
+# Show or hide hidden files quickly
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+```
+
 ### Sublime Text
 
 Install [Sublime Text 3](http://www.sublimetext.com/3) and [Package Control](https://packagecontrol.io/installation).
