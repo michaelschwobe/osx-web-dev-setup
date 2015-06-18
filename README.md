@@ -37,7 +37,7 @@ xcode-select --install
 
 ### Homebrew
 
-To make updating easier, you'll need a package manager for things like Node, Gulp, etc.
+To make updating easier, you'll need a package manager for things like Node, Git, etc.
 
 Install [Homebrew](http://brew.sh/):
 
@@ -51,7 +51,7 @@ And just because, run this afterwards:
 brew update && brew doctor
 ```
 
-Install gems and brew dependencies as needed (rbenv, mustache, etc.).
+Install gems and brew dependencies as needed (ex: rbenv).
 
 ### $PATH
 
@@ -116,15 +116,13 @@ Finally, in `~/.zshrc` switch the theme declaration to:
 ZSH_THEME="agnoster"
 ```
 
-Relaunch if necessary to see your changes.
-
-Check if the icons are working:
+Relaunch if necessary to see your changes and check if the icons are working using this command:
 
 ```
 echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 ```
 
-If the icons don't align perfectly, adjusting the Non-ASCII Font size is simpler than trying mess with font baselines.
+If the icons don't align perfectly, adjusting the Non-ASCII Font size is simpler than trying to fix font baselines.
 
 ### Sublime Text
 
@@ -143,7 +141,7 @@ Open `Preferences > Settings - User` and update the settings to include:
 **TIP:** Don't use a trailing comma on the last item.
 
 **Theme & Color Scheme:**
-[Spacegrey Theme](http://kkga.github.io/spacegray/) - follow the github link to install and then open `Preferences > Settings - User` and add the Spacegrey settings:
+[Spacegrey Theme](http://kkga.github.io/spacegray/) - follow the github link  and follow the README file to install the theme, then open `Preferences > Settings - User` and add these Spacegrey settings:
 
 ```json
 "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
