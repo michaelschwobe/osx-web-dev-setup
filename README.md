@@ -87,7 +87,7 @@ Install [Gulp](http://gulpjs.com/) via NPM and other node packages as needed (gr
 
 ```
 brew update
-brew upgrade node
+brew upgrade --all
 ```
 
 **TIP 2:** Updating NPM outside of Homebrew:
@@ -180,6 +180,14 @@ Install via Package Manager:
 - SublimeLinter-csslint - **Run prior to installation:** `npm install -g csslint`
 - SublimeLinter-jshint - **Run prior to installation:** `npm install -g jshint`
 - SublimeLinter-php
+
+**TIP:** Want to use Sublime from the command line? Add these lines to the end of `~/zshrc`:
+
+```
+# Sublime aliases
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias zshconfig="subl ~/.zshrc"
+```
 
 ### Git Tools
 
