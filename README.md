@@ -133,6 +133,13 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 ```
 
+**TIP:** Add autocompletion to repetitive commands by adding your preferred zsh plugins:
+
+```
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(brew git git-flow npm sublime)
+```
+
 ### Sublime Text
 
 Install [Sublime Text 3](http://www.sublimetext.com/3) and [Package Control](https://packagecontrol.io/installation).
