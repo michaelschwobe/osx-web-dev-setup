@@ -164,6 +164,7 @@ Open `Preferences > Settings - User` and update the settings to include:
 Install via Package Manager:
 
 - Alignment
+- ApacheConf.tmLanguage
 - BracketHighlighter
 - CSScomb
 - DocBlockr
