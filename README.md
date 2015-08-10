@@ -87,6 +87,7 @@ Install [Gulp](http://gulpjs.com/) via NPM and other node packages as needed (gr
 
 ```
 brew update
+brew doctor
 brew upgrade --all
 ```
 
@@ -207,9 +208,9 @@ Other useful Applications & Tools not mentioned above:
 
 - [1Password](https://agilebits.com/onepassword)
 - [Adium](https://adium.im/)
+- [Adobe Creative Cloud](http://www.adobe.com/creativecloud.html)
 - [BrowserStack](https://www.browserstack.com/)
 - [CodeKit](https://incident57.com/codekit/)
-- [Creative Cloud](http://www.adobe.com/creativecloud.html)
 - [DiffMerge](https://sourcegear.com/diffmerge/)
 - [Divvy](http://mizage.com/divvy/)
 - [DropBox](https://www.dropbox.com/)
