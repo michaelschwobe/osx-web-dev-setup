@@ -2,18 +2,19 @@
 
 My opinionated checklist for getting my Mac up and running for web-based projects and graphic design.
 
-**Table of Contents**
+<!-- MarkdownTOC -->
 
 - [Configure OSX](#configure-osx)
-	- [Homebrew](#homebrew)
-	- [$PATH](#path)
-	- [Node, & NPM](#node--npm)
-	- [Gulp](#gulp)
+  - [Homebrew](#homebrew)
+  - [$PATH](#path)
+  - [Node & NPM](#node--npm)
 - [Applications](#applications)
-	- [iTerm](#iterm)
-	- [Sublime Text](#sublime-text)
-	- [Git Tools](#git-tools)
-	- [Others](#others)
+  - [iTerm](#iterm)
+  - [Sublime Text](#sublime-text)
+  - [Git Tools](#git-tools)
+  - [Others](#others)
+
+<!-- /MarkdownTOC -->
 
 ## Configure OSX
 
@@ -51,7 +52,11 @@ And just because, run this afterwards:
 brew update && brew doctor
 ```
 
-Install gems and brew dependencies as needed (ex: rbenv).
+**TIP:** One-liner for updating Homebrew and other installed packages (such as Node):
+
+```
+brew update && brew upgrade && brew doctor && brew cleanup
+```
 
 ### $PATH
 
@@ -81,20 +86,12 @@ Install [Node & NPM](#) with Homebrew:
 brew install node
 ```
 
-Install [Gulp](http://gulpjs.com/) via NPM and other node packages as needed (grunt, bower, etc.).
+**TIP 1:** Manage different versions of Node with [NVM](https://www.npmjs.com/package/nvm).
 
-**TIP 1:** Updating:
-
-```
-brew update
-brew doctor
-brew upgrade --all
-```
-
-**TIP 2:** Updating NPM outside of Homebrew:
+**TIP 2:** Updating NPM and check for other outdated packages (_globally_):
 
 ```
-npm install -g npm@latest
+npm i -g npm@latest && npm outdated -g --depth=0
 ```
 
 ## Applications
@@ -125,7 +122,7 @@ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 
 If the icons don't align perfectly, adjusting the Non-ASCII Font size is simpler than trying to fix font baselines.
 
-**TIP:** Want to use the commands `showFiles` and `hideFiles` to quickly toggle hidden files on or off? Add these lines to the end of `~/zshrc`:
+**TIP 1:** Want to use the commands `showFiles` and `hideFiles` to quickly toggle hidden files on or off? Add these lines to the end of `~/zshrc`:
 
 ```
 # Show or hide hidden files quickly
@@ -133,31 +130,65 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 ```
 
-**TIP:** Add autocompletion to repetitive commands by adding your preferred zsh plugins:
+**TIP 2:** Add autocompletion to repetitive commands by adding your preferred zsh plugins:
 
 ```
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-flow npm sublime)
+plugins=(brew git git-flow npm)
 ```
 
 ### Sublime Text
 
-Install [Sublime Text 3](http://www.sublimetext.com/3) and [Package Control](https://packagecontrol.io/installation).
+Install [Sublime Text 3](https://www.sublimetext.com/) and [Package Control](https://packagecontrol.io/installation).
 
-Open `Preferences > Settings - User` and update the settings to include:
+Open `Preferences > Settings - User` and _update_ the settings to include (remove older duplicate lines):
 
 ```json
+"always_show_minimap_viewport": true,
+"bold_folder_labels": true,
+"caret_extra_bottom": 2,
+"caret_extra_top": 2,
+"caret_extra_width": 2,
+"caret_style": "phase",
 "close_windows_when_empty": true,
+"draw_minimap_border": true,
 "draw_white_space": "all",
+"ensure_newline_at_eof_on_save": true,
 "highlight_line": true,
+"ignored_packages":
+[
+  "Vintage"
+],
+"indent_guide_options":
+[
+  "draw_active"
+],
+"line_padding_bottom": 1,
+"line_padding_top": 1,
+"overlay_scroll_bars": "enabled",
+"tab_size": 2,
+"translate_tabs_to_spaces": true,
 "trim_trailing_white_space_on_save": true,
-"word_wrap": "true"
+"word_wrap": true
 ```
 
 **TIP:** Don't use a trailing comma on the last item.
 
 **Theme & Color Scheme:**
-[Spacegrey Theme](http://kkga.github.io/spacegray/) - follow the github link  and follow the README file to install the theme, then open `Preferences > Settings - User` and add these Spacegrey settings:
+
+Install one or both themes linked below (using their instructions) and use __one__ of these extra settings:
+
+[Materialize](https://github.com/saadq/Materialize) settings:
+
+```json
+"color_scheme": "Packages/User/SublimeLinter/Material Spacegray (SL).tmTheme",
+"material_theme_bold_tab": true,
+"material_theme_small_statusbar": true,
+"material_theme_small_tab": true,
+"theme": "Material Spacegray.sublime-theme"
+```
+
+[Spacegrey Theme](http://kkga.github.io/spacegray/) settings:
 
 ```json
 "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
@@ -168,33 +199,41 @@ Open `Preferences > Settings - User` and update the settings to include:
 ```
 
 **Sublime Packages:**
-Install via Package Manager:
+Additional favorites, install via Package Manager:
 
 - Alignment
 - ApacheConf.tmLanguage
+- AutoFileName
+- Babel
+- Babel Snippets
 - BracketHighlighter
+- CodeComplice
+- Color Highlighter
+- CSS3
 - CSScomb
 - DocBlockr
+- EditorConfig
 - Emmet
 - Handlebars
 - jQuery
 - JsFormat
 - LESS
 - Markdown Preview
+- MarkdownTOC
 - Nettuts+ Fetch
 - SCSS
 - SideBarEnhancements
-- SublimeCodeIntel
 - SublimeLinter
-- SublimeLinter-csslint - **Run prior to installation:** `npm install -g csslint`
-- SublimeLinter-jshint - **Run prior to installation:** `npm install -g jshint`
-- SublimeLinter-php
+- SublimeLinter-contrib-eslint - **Prior to installation:** `npm install -g eslint`
+- SublimeLinter-contrib-stylelint - **Prior to installation:** `npm install -g stylelint`
 
 **TIP:** Want to use Sublime from the command line? Add these lines to the end of `~/zshrc`:
 
 ```
-# Sublime aliases
+# Sublime alias
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# Open this file (.zshrc) in Sublime
 alias zshconfig="subl ~/.zshrc"
 ```
 
