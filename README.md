@@ -1,6 +1,6 @@
 # OSX Web Development Setup
 
-My opinionated checklist for getting my Mac up and running for web-based projects and graphic design.
+> My opinionated checklist for getting my Mac up and running for web-based projects and graphic design.
 
 <!-- MarkdownTOC -->
 
@@ -9,7 +9,7 @@ My opinionated checklist for getting my Mac up and running for web-based project
   - [$PATH](#path)
   - [Node & NPM](#node--npm)
 - [Applications](#applications)
-  - [iTerm](#iterm)
+  - [iTerm2](#iterm2)
   - [Sublime Text](#sublime-text)
   - [Git Tools](#git-tools)
   - [Others](#others)
@@ -98,15 +98,15 @@ npm i -g npm@latest && npm outdated -g --depth=0
 
 If you have list of applications you need and don't feel like downloading and installing them manually, try [Homebrew Cask](http://caskroom.io/). If you prefer to do it the manual way, read on.
 
-### iTerm
+### iTerm2
 
 Install [iTerm2](https://www.iterm2.com/) and then install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) via curl.
 
 **Colors:**
-Download [base16 Ocean Dark iTerm colors](https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors), go to `iTerm > Preferences > Profiles > Colors > Load Presets > Import`, upload the base16 file and select it as your preset.
+Download [base16 Ocean Dark iTerm2 colors](https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors), go to `iTerm2 > Preferences > Profiles > Colors > Load Presets > Import`, upload the base16 file and select it as your preset.
 
 **Fonts:**
-Browse to [Powerline-patched fonts](https://github.com/powerline/fonts) and follow the installation instructions, go to `iTerm > Preferences > Profiles > Text > Change Font` and change both fonts to "Source Code Pro for Powerline".
+Browse to [Powerline-patched fonts](https://github.com/powerline/fonts) and follow the installation instructions, go to `iTerm2 > Preferences > Profiles > Text > Change Font` and change both fonts to "Source Code Pro for Powerline".
 
 Finally, in `~/.zshrc` switch the theme declaration to:
 
@@ -120,9 +120,9 @@ Relaunch if necessary to see your changes and check if the icons are working usi
 echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 ```
 
-If the icons don't align perfectly, adjusting the Non-ASCII Font size is simpler than trying to fix font baselines.
+**TIP 1:** If the icons don't align perfectly, change the font size. If all else fails, adjusting the Non-ASCII Font size is simpler than trying to fix font baselines.
 
-**TIP 1:** Want to use the commands `showFiles` and `hideFiles` to quickly toggle hidden files on or off? Add these lines to the end of `~/zshrc`:
+**TIP 2:** Want to use the commands `showFiles` and `hideFiles` to quickly toggle hidden files on or off? Add these lines to the end of `~/zshrc`:
 
 ```
 # Show or hide hidden files quickly
@@ -130,7 +130,7 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 ```
 
-**TIP 2:** Add autocompletion to repetitive commands by adding your preferred zsh plugins:
+**TIP 3:** Add autocompletion to repetitive commands by adding your preferred zsh plugins:
 
 ```
 # Add wisely, as too many plugins slow down shell startup.
@@ -226,6 +226,7 @@ Additional favorites, install via Package Manager:
 - SublimeLinter
 - SublimeLinter-contrib-eslint - **Prior to installation:** `npm install -g eslint`
 - SublimeLinter-contrib-stylelint - **Prior to installation:** `npm install -g stylelint`
+- Terminal
 
 **TIP:** Want to use Sublime from the command line? Add these lines to the end of `~/zshrc`:
 
@@ -254,12 +255,12 @@ For unlimited FREE **private** repositories:
 Other useful Applications & Tools not mentioned above:
 
 - [1Password](https://agilebits.com/onepassword)
-- [Adium](https://adium.im/)
 - [Adobe Creative Cloud](http://www.adobe.com/creativecloud.html)
+- [Atom](https://atom.io/)
 - [BrowserStack](https://www.browserstack.com/)
 - [CodeKit](https://incident57.com/codekit/)
 - [DiffMerge](https://sourcegear.com/diffmerge/)
-- [Divvy](http://mizage.com/divvy/)
+- [Divvy](http://mizage.com/divvy/) or [Spectacle](https://www.spectacleapp.com/)
 - [DropBox](https://www.dropbox.com/)
 - [FirefoxDeveloperEdition](https://www.mozilla.org/en-US/firefox/developer/)
 - [Google Chrome](http://www.google.com/chrome/)
@@ -270,4 +271,4 @@ Other useful Applications & Tools not mentioned above:
 - [Slack](https://slack.com/)
 - [Spotify](https://www.spotify.com/)
 - [Transmit](https://panic.com/transmit/)
-- [Wunderlist](https://www.wunderlist.com/)
+- [Visual Studio Code](https://code.visualstudio.com)
