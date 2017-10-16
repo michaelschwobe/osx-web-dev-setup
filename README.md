@@ -1,5 +1,7 @@
 # OSX Web Development Setup
 
+__DEPRECATED:__ This project is no longer actively maintained, use [this](https://github.com/michaelschwobe/mac-dev-setup) instead.
+
 > My opinionated checklist for getting my Mac up and running for web-based projects and graphic design.
 
 <!-- MarkdownTOC -->
